@@ -1,0 +1,27 @@
+install python
+install pip #for virtualization and check the version
+pip install virtualenv # install the virtualenv
+virtualenv env 
+source env/Scripts/activate #for windows
+source env/bin/activate #for mac and linux
+
+##now install the requirements
+pip install flask flask-sqlalchemy
+
+
+use jinja-2 by flask
+
+#to setup database
+source env/Scripts/activate
+set FLASK_APP=app.py #set the flask enviroment
+flask shell
+from app import db
+db.create_all()
+
+
+#setup heroku
+install heroku cli
+heroku login #login the cli
+source env/Scripts/activate
+pip install gunicorn
+pip freeze > requirements.txt #to freeze the requirements
