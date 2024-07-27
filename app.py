@@ -68,8 +68,5 @@ def update(id):
         return render_template('update.html', task=task)
 
 
-# @app.route('/base')
-# def base():
-#     return render_template('base.html', head='Base_page', body='This is the base page of the website')
 if __name__ == '__main__':
     app.run(debug=True)
